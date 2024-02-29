@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+        
+}
+.container{
+    z-index: 10;
+}
+.coin-container{
+    display: flex;
+    float: left;
+    margin: 5px;
+    flex-direction: row; 
+    justify-content: center;
+    position: relative;
+    z-index: 20;
+    
+}
+.coin-container .coin-row{
+    position: relative;
+    height: 300px;
+    width: 250px;
+    background: #282B43;
+    border-radius: 20px;
+    overflow: hidden;
+    
+}
+.coin-container .coin-row:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #0DBFC8;
+    clip-path: circle(150px at 80% 20%);
+    transition: 0.5s ease-in-out;
+
+}
+.coin-container .coin-row:hover:before{
+    clip-path: circle(300px at 80% -20%);
+}
+.coin-container .coin-row:after{
+    content: 'Crypto';
+    position: absolute;
+    top: 30%;
+    left: -20% ;
+    font-size: 8rem;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.3 );
+}
+
+.coin-container .coin-row .coin{
+    position:absolute;
+    top :50%;
+    transform: translateY(-50%);
+    z-index: 1000;
+    width: 100%;
+    height: 220px;
+    transition: 0.5s;
+    
+}
+.coin-container .coin-row:hover .coin{
+    top: 0%;
+    transform: translateY(0%);
+
+}
+.coin-container .coin-row .coin img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-90%);
+    width: 100px;
+}
+.coin-container .coin-row .coin-data{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    transition: 1s;
+    z-index: 10;
+}
+.coin-container .coin-row:hover .coin-data{
+    height: 180px;
+
+}
+.coin-container .coin-row .coin-data h2{
+    position: relative;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #fff;
+
+}
+.coin-container .coin-row .coin-data2 p{
+    height: 26px;
+    text-align: center;
+    line-height: 26px;
+    font-size: 14px;
+    color: #fff;
+} 
+.coin-percent{
+    width: 100%;
+}
+.red{
+    color: #f00;
+}
+.green{
+    color: #008000;
+}
